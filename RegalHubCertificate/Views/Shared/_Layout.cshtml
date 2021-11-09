@@ -1,0 +1,124 @@
+﻿@model RegalHubCertificate.Models.Information
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="HTML, CSS, C#, iText 7, ASP.NET Core" />
+    <meta name="description" content="Regal Hub Certificate Generator website" />
+    <meta name="author" content="PhilsKay" />
+    <!--<meta http-equiv="refresh" content="60" />-->
+    <title>@ViewData["Title"] - RegalHubCertificate</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!--
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <link rel="icon" href="/image/favicon.png">
+
+    <style>
+        input[type="password"] {
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            border: 3px solid purple;
+            display: block;
+            margin-bottom: 20px;
+            margin-left: 25px;
+            outline: none;
+        }
+
+            input[type="password"]:focus {
+                border-color: purple;
+                box-shadow: 0 0 0 0.25rem rgb(216 13 253 / 25%);
+            }
+    </style>
+</head>
+    <body>
+
+        <!-- Image and text -->
+    <nav class="navbar">
+        <img src="/image/IMG-20210927-WA0003.jpg" class="logo-img" alt="logo-img">
+        <!-- <span class="navbar-text m-auto">
+               <span class="heading">Eduhub,</span> Let's Take you forward.
+              </span> -->
+        <p class="head">Regal Writers Hub Community </p>
+    </nav>
+
+
+    <div class="box">
+        <form method="post" asp-action="GetCertificate">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <h1>Get your certificates here !</h1>
+            <input asp-for="Name" type="text" placeholder="Name" class="form-control" required autocomplete="off" autofocus>
+            <span asp-validation-for="Name" class="text-danger"></span>
+            <input asp-for="Pass" type="password" placeholder="Secret Pass" class="form-control" required autocomplete="off" autofocus>
+            <span asp-validation-for="Pass" class="text-danger"></span>
+
+            <button id="submit" type="submit">Print</button>
+        </form>
+
+        <img class="sample" src="/image/IMG-20211103-WA0006.jpg">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col aboutus">
+                <h2>About Us</h2>
+                <p>
+                    Spread the word ... The plan is to bring the world to the light
+                    of talented writers. An international Hub that connects writers
+                    and readers. We are building ourselves to become one of the biggest
+                    force in the entire creative industry.
+                </p>
+            </div>
+            <div class="col socials">
+                <h2>Social Media's</h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/regalwritershub?r=nametag" target="_blank">Instagram</a></li>
+                    <li><a href="https://twitter.com/RegalHub?s=09" target="_blank">Twitter</a></li>
+                    <li><a href="https://regalwritershub.com" target="_blank">Blog</a></li>
+                </ul>
+            </div>
+            <div class="col subscribe">
+                <h3>Stay updated with us...</h3>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Enter your email address"
+                           aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <button class="btn btn-outline-dark" type="button" id="button-addon2">Subscribe</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Regal Writers Hub &#169; 2021 </p>
+    </div>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    @section scripts{
+        @{
+            <partial name="_ValidationScriptsPartial" />
+        }
+
+    }
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    </body>
+</html>
