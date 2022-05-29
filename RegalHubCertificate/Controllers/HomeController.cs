@@ -41,7 +41,7 @@ namespace RegalHubCertificate.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult GetCertificate(Information obj)
         {
-            if (ModelState.IsValid && obj.Pass == "@Daddy123")
+            if (ModelState.IsValid && obj.Pass == "Daddy123")
             {
                 string rootPath = this.Environment.WebRootPath;
                 byte[] InByte;

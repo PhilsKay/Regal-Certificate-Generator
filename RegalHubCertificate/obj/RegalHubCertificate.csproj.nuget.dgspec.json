@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Phils\\C# files\\ASP.NET CORE\\Client\\RegalHubCertificate\\RegalHubCertificate\\RegalHubCertificate.csproj": {}
+    "C:\\Users\\danikay tech\\regal-project\\Regal-Certificate-Generator\\RegalHubCertificate\\RegalHubCertificate.csproj": {}
   },
   "projects": {
-    "C:\\Phils\\C# files\\ASP.NET CORE\\Client\\RegalHubCertificate\\RegalHubCertificate\\RegalHubCertificate.csproj": {
+    "C:\\Users\\danikay tech\\regal-project\\Regal-Certificate-Generator\\RegalHubCertificate\\RegalHubCertificate.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Phils\\C# files\\ASP.NET CORE\\Client\\RegalHubCertificate\\RegalHubCertificate\\RegalHubCertificate.csproj",
+        "projectUniqueName": "C:\\Users\\danikay tech\\regal-project\\Regal-Certificate-Generator\\RegalHubCertificate\\RegalHubCertificate.csproj",
         "projectName": "RegalHubCertificate",
-        "projectPath": "C:\\Phils\\C# files\\ASP.NET CORE\\Client\\RegalHubCertificate\\RegalHubCertificate\\RegalHubCertificate.csproj",
+        "projectPath": "C:\\Users\\danikay tech\\regal-project\\Regal-Certificate-Generator\\RegalHubCertificate\\RegalHubCertificate.csproj",
         "packagesPath": "C:\\Users\\danikay tech\\.nuget\\packages\\",
-        "outputPath": "C:\\Phils\\C# files\\ASP.NET CORE\\Client\\RegalHubCertificate\\RegalHubCertificate\\obj\\",
+        "outputPath": "C:\\Users\\danikay tech\\regal-project\\Regal-Certificate-Generator\\RegalHubCertificate\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\danikay tech\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,6 +59,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.17, 5.0.17]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[5.0.0, 5.0.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -67,7 +85,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
