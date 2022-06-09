@@ -60,7 +60,7 @@ namespace RegalHubCertificate.Controllers
                     doc.Flush();
                     InByte = memory.ToArray();
                 }
-                   
+                Response.Headers.Add("Content-Deposition", "inline; filename=pdfcertificate");
                 return new FileContentResult(InByte, "application/pdf");
             }
             ModelState.AddModelError(obj.Pass, "Yo? Could not generate Certificate");
