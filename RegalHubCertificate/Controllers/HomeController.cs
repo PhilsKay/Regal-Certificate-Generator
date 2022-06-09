@@ -37,8 +37,6 @@ namespace RegalHubCertificate.Controllers
             return View();
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
         public IActionResult GetCertificate(Information obj)
         {
             if (ModelState.IsValid && obj.Pass == "Daddy123")
